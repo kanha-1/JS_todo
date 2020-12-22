@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image:linear-gradient(120deg,#f6d365,#fda085) ;
+    color: white;
+    font-family:"poppins",sans-serif;
+    min-height: 100vh;
+}
+header,form {
+    min-height: 20vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+form input, form button {
+    padding:0.5rem;
+    font-size:2rem;
+    border:none;
+    background:white;
+}
+input:focus, textarea:focus, button:focus{
+    outline: none;
+}
+form button {
+    color:#fda085 ;
+    background:white;
+    cursor:pointer;
+    transition:all 0.3 ease;
+}
+form button:hover{
+    background:#fda085;
+    color:white;
+}
+.todo_container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo_list{
+    min-width: 30%;
+    list-style:none;
+}
+.todo{
+    margin:0.5rem;
+    background-color: antiquewhite;
+    color:black;
+    font-size:1.5rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:all 0.5s ease;
+}
+.todo li{
+    flex:1;
+}
+.complete_btn,.trash_btn{
+    background-color:#ff6f47;
+    color:white;
+    border:none;
+    padding:1rem;
+    cursor: pointer;
+    font-size:1rem;
+}
+.complete_btn{
+    background-color:rgb(82, 211, 82);
+}
+.todo_item{
+    padding:0rem 0.5rem;
+}
+.fa-trash,.fa-check{
+    pointer-events:none;
+}
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.dlt{
+    transform:translateY(8rem) rotateZ(30deg);
+    opacity: 0;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    
+}
+select{
+    color: #ff6f47;
+    width:10rem;
+    cursor:pointer;
+    padding:1rem;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background:#ff6f47;
+    top:0;
+    right:0;
+    padding:1rem;
+    pointer-events:none;
+}
+.select:hover::after{
+    background-color: white;
+    color: #ff6f47;
+}
